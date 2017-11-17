@@ -7,6 +7,8 @@ var mongoose = require("mongoose");
 var db = require("./models");
 var axios= require("axios");
 var cheerio =require("cheerio");
+// for mongo deployement onto heroku
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/webscrapper";
 //mongo and mongoose
 
 var app = express();//express = app
