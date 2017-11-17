@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 
 //Set mongoose to leverage built in Javascript
 mongoose.Promise = Promise;
-mongoose.connect("mongodb://localhost/webscrapper",{
+mongoose.connect(MONGODB_URI,{
   useMongoClient: true
 })
 
