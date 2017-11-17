@@ -19,13 +19,15 @@ $(function() {
 
       var id = $(this).attr("id");
       var save = $(this).attr("value");
+      console.log(save)
       var data = {
         _id: id,
         boolean: save,
       }
       // console.log(data);
-      $.ajax("/articles/"+id, {
-        type:"PUT",
+      $.ajax({
+        url:"/article/"+id,
+        type:"POST",
         data: data
       }).done(function(result){
         console.log("Saved");
@@ -33,5 +35,4 @@ $(function() {
       });
 
     })
-
-})
+});

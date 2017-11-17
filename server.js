@@ -45,12 +45,9 @@ app.get("/",function(req,res){
       var article = {
         article: dbArticles
       }
-
       //console.log("\n handlebars ", hdlbrs);
       res.render("index", article);
-   
       }else {
-      
       // with response 
       // render hdlbrs index template 
       res.render("index");
@@ -107,7 +104,7 @@ app.get("/articles/saved", function(req, res){
       }
 
       //console.log("\n handlebars ", hdlbrs);
-      res.render("partials/save", article);
+      res.render("partials/save", articles);
    
       }else {
       
@@ -128,6 +125,7 @@ app.get("/articles/:id", function(req, res){
 }) 
 
 app.post("/articles/:id", function(req, res){
+  var id = req.params.id;
     console.log("Hello !!!!!");
      // Create a new note and pass the req.body to the entry
     db.Article.create(req.body).then(function(dbArticle) {
