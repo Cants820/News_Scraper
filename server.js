@@ -23,7 +23,7 @@ app.use(bodyParser.urlencoded({ extended: false}));
 
 //Set mongoose to leverage built in Javascript
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI,{
+mongoose.connect("mongodb://heroku_grdzwpgz:ofec8p51o9lk0lqv3llpri9n35@ds111496.mlab.com:11496/heroku_grdzwpgz",{
   useMongoClient: true
 })
 
