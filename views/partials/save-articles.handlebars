@@ -1,0 +1,6 @@
+ <div>
+ {{#each articles}}
+    {{#if this.boolean}}
+    <button class="delete" id={{this.id}} data-state={{this.devoured}}>{{this.burger_name}}<img alt="devoured burger" src="assets/img/devoured.jpg" width="100px" height="100px"></button>
+    {{/if}}
+</div>
